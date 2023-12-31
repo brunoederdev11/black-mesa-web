@@ -1,0 +1,51 @@
+---
+interface Props {
+    title: string;
+    parrafo: string;
+    image: string;
+    alt: string;
+}
+
+const { parrafo, image, title, alt } = Astro.props;
+---
+
+<article class="cap">
+    <div>
+        <img src={image} alt={alt} />
+    </div>
+    <div class="text_contain">
+        <h2 class="title">{title}</h2>
+        <p>{parrafo}</p>
+    </div>
+</article>
+
+<style>
+    .cap {
+        position: relative;
+    }
+
+    /*.img_contain {
+        filter: blur(4px);
+    } */
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .title {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .text_contain {
+        background: linear-gradient(transparent, black, black);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: absolute;
+        bottom: 0;
+        padding: 30px;
+    }
+</style>

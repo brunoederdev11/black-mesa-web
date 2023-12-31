@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import portada from "../images/Black_Mesa_cover.webp";
+---
+
+<Layout title="Black Mesa">
+    <section class="presentación">
+        <div>
+            <p>
+                <em>«Corre. Piensa. Dispara. Source»</em>
+                <br />
+                 — Lema de Black Mesa, un guiño al lema original del Half-Life.
+            </p>
+            <br />
+            <p>
+                Black Mesa, estilizado como BLλCK MESA (antes conocido como Black
+                Mesa: Source), es un remake hecho por fans del primer Half-Life. El
+                objetivo final del juego fue recrear el Half-Life original desde
+                cero, utilizando las capacidades avanzadas del motor Source para
+                crear un nuevo y más apasionante mundo dentro del juego con entornos
+                más variados y complejos y una jugabilidad más desafiante y realista.
+                Fue lanzado de forma completa el 6 de marzo de 2020 a través de
+                Steam.
+            </p>
+            <p>
+                Originalmente requería Source SDK 2007, Black Mesa ahora se considera
+                un juego independiente y está disponible en Steam por sólo $19.99. La
+                fecha original de lanzamiento del proyecto se fijó para 2009, pero se
+                retrasó 3 años. El 1 de septiembre de 2012, el líder del proyecto
+                Carlos Montero (cman2k) había anunciado que Black Mesa saldría en 12
+                días y había publicado una cuenta atrás en el sitio web oficial.
+            </p>
+        </div>
+        <Image src={portada} alt="Portada de Black Mesa" class="portada" />
+    </section>
+</Layout>
+
+<style>
+    .presentación {
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        display: flex;
+        gap: 50px;
+        padding: 60px;
+        max-width: 100rem;
+        min-width: 936px;
+        box-shadow: 0px 0px 20px 2px rgb(0, 0, 0);
+        margin-top: 5vh;
+    }
+
+    .portada {
+        width: 40%;
+    }
+
+    /* media query en proceso */
+
+    @media (max-width: 1000px) {
+        .presentación {
+            flex-direction: column;
+            min-width: 200px;
+        }
+
+        .portada {
+            width: 50%;
+        }
+    }
+</style>

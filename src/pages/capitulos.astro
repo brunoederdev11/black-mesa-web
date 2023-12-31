@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Caps from "../components/Caps.astro";
+import { CAPS } from "../data/caps";
+---
+
+<Layout title="Black Mesa">
+    <section class="principal">
+        {
+            CAPS.map((x) => (
+                <Caps
+                    title={x.title}
+                    parrafo={x.parrafo}
+                    image={x.image}
+                    alt={x.alt}
+                />
+            ))
+        }
+    </section>
+
+    <style>
+        .principal {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+        }
+    </style>
+</Layout>
