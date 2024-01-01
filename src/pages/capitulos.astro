@@ -21,8 +21,20 @@ import { CAPS } from "../data/caps";
     <style>
         .principal {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto;
             gap: 20px;
+        }
+
+        @media (min-width: 2500px) {
+            .principal {
+                grid-template-columns: auto auto auto;
+            }
+        }
+
+        @media (max-width: 1800px) {
+            .principal {
+                grid-template-columns: auto;
+            }
         }
     </style>
 </Layout>

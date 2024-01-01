@@ -45,13 +45,19 @@ const { title } = Astro.props;
                 color: white;
                 justify-content: center;
                 flex-direction: column;
-                padding: 0px 120px;
+                padding: 0px 110px;
                 padding-bottom: 50px;
             }
 
             main {
                 display: flex;
                 justify-content: center;
+            }
+
+            @media (max-width: 911px) {
+                body {
+                    padding: 0 30px;
+                }
             }
         </style>
     </body>

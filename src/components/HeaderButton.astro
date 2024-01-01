@@ -14,9 +14,7 @@ const finalClass = isLinkActive ? "block relative py-7 px-20  font-bold" : "butt
 <ul>
     <li>
         <a href={href} class={finalClass}><span><slot /></span></a>
-        <span
-            class={`${isLinkActive ? "outlineS" : ``} `}
-        ></span>
+        <span class={`${isLinkActive ? "outlineS" : ``} `}></span>
     </li>
 </ul>
 

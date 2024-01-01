@@ -48,4 +48,17 @@ const { parrafo, image, title, alt } = Astro.props;
         bottom: 0;
         padding: 30px;
     }
+
+    @media (max-width: 800px) {
+        img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .text_contain {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+    }
 </style>
