@@ -8,7 +8,9 @@ const { href } = Astro.props;
 const currentPath = Astro.url.pathname;
 const isLinkActive = href === currentPath;
 
-const finalClass = isLinkActive ? "block relative py-7 px-20  font-bold" : "button";
+const finalClass = isLinkActive
+    ? "block relative py-7 px-20  font-bold text-center"
+    : "button";
 ---
 
 <ul>
@@ -26,6 +28,7 @@ const finalClass = isLinkActive ? "block relative py-7 px-20  font-bold" : "butt
         color: white;
         font-weight: bold;
         overflow: hidden;
+        text-align: center;
     }
 
     .button:hover {
@@ -84,7 +87,17 @@ const finalClass = isLinkActive ? "block relative py-7 px-20  font-bold" : "butt
     }
 
     ul {
+        width: 100%;
         padding: 0;
         margin: 0;
+    }
+
+    @media (max-width: 911px) {
+        .button::after {
+            display: none;
+        }
+        .button:hover {
+            color: white;
+        }
     }
 </style>
